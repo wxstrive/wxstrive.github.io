@@ -6,19 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | 鑫仔的个人空间</title>
+  <title>JPA(一) | 鑫仔的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="1. 概念 JPA是Java Persistence API的简称,作为Java EE 5.0 平台标准的 对象关系映射(ORM) 规范将得到所有 Java EE 服务器的支持。 Sun 这次吸取了之前 EJB 规范惨痛失败的经历，在充分吸收现有ORM 框架(如Hibernate)的基础上，得到了一个易于使用、伸缩性强的 ORM 规范 Hibernate是一个开放源代码的对象关系映射(ORM)框架">
+<meta name="keywords" content="JPA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/09/26/hello-world/index.html">
+<meta property="og:title" content="JPA(一)">
+<meta property="og:url" content="http://yoursite.com/2019/09/27/JPA(一)/index.html">
 <meta property="og:site_name" content="鑫仔的个人空间">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="1. 概念 JPA是Java Persistence API的简称,作为Java EE 5.0 平台标准的 对象关系映射(ORM) 规范将得到所有 Java EE 服务器的支持。 Sun 这次吸取了之前 EJB 规范惨痛失败的经历，在充分吸收现有ORM 框架(如Hibernate)的基础上，得到了一个易于使用、伸缩性强的 ORM 规范 Hibernate是一个开放源代码的对象关系映射(ORM)框架">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-26T11:38:16.574Z">
+<meta property="og:image" content="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps1.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps2.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps3.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps4.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps5.jpg">
+<meta property="og:image" content="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps6.jpg">
+<meta property="og:updated_time" content="2019-09-27T12:28:53.471Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="JPA(一)">
+<meta name="twitter:description" content="1. 概念 JPA是Java Persistence API的简称,作为Java EE 5.0 平台标准的 对象关系映射(ORM) 规范将得到所有 Java EE 服务器的支持。 Sun 这次吸取了之前 EJB 规范惨痛失败的经历，在充分吸收现有ORM 框架(如Hibernate)的基础上，得到了一个易于使用、伸缩性强的 ORM 规范 Hibernate是一个开放源代码的对象关系映射(ORM)框架">
+<meta name="twitter:image" content="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="鑫仔的个人空间" type="application/atom+xml">
   
@@ -87,8 +95,6 @@
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
@@ -130,8 +136,6 @@
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
@@ -158,68 +162,218 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JPA(一)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      JPA(一)
     </h1>
   
 
         
-        <a href="/2019/09/26/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-26T11:38:16.574Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-26</time>
+        <a href="/2019/09/27/JPA(一)/" class="archive-article-date">
+  	<time datetime="2019-09-27T12:26:32.916Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="1-概念"><a href="#1-概念" class="headerlink" title="1. 概念"></a>1. 概念</h2><ul>
+<li>JPA是Java Persistence API的简称,作为Java EE 5.0 平台标准的 <strong>对象关系映射(ORM) 规范</strong>将得到所有 Java EE 服务器的支持。 Sun 这次吸取了之前 EJB 规范惨痛失败的经历，在充分吸收现有ORM 框架(如Hibernate)的基础上，得到了一个易于使用、伸缩性强的 ORM 规范</li>
+<li>Hibernate是一个开放源代码的<strong>对象关系映射(ORM)</strong>框架，它对JDBC进行了非常轻量级(相对于EJB这一套)的对象封装，它将POJO(就是咱们的domain)与数据库表建立映射关系，是一个全自动的orm框架，Hibernate可以自动生成SQL语句，自动执行，使得Java程序员可以随心所欲的使用对象编程思维来操纵数据库</li>
+<li>简单一句话：JPA是持久化规范，而Hibernate是其实现。<a id="more"></a></li>
+</ul>
+<h2 id="2-JPA优缺点"><a href="#2-JPA优缺点" class="headerlink" title="2. JPA优缺点"></a>2. JPA优缺点</h2><ul>
+<li><p>本质:处理Java对象和关系型数据库表之间的转换，只是对JDBC再次做了一层封装</p>
+</li>
+<li><p>优点:</p>
+<ul>
+<li><p>程序员操作很简单，代码简单 entityManager.persist(employee);    </p>
+</li>
+<li><p>直接面向持久对象操作</p>
+</li>
+<li><p>提供世界级数据缓存(现在几乎所有的ORM框架的缓存都是学的Hibernate)</p>
+<p>​            一级缓存，二级缓存，查询缓存(空间换速度)</p>
+</li>
+<li><p>数据库移植性很强，很少的修改(通过配置方言搞定)</p>
+<p>​            把各种数据库抽取了一个方言接口</p>
+<p>​            不同数据库实现一个方言接口，如果换了数据库，必须修改方言实现，驱动jar文件，连接数据库信息。</p>
+</li>
+</ul>
+</li>
+<li><p>缺点:</p>
+<ul>
+<li>不能干预sql语句的生成</li>
+<li>一个项目中，如果对sql语句的优化要求比较高，不适合用JPA(不过可以使用JPA对原生sql的支持来解决)</li>
+<li>如果一张表中有上亿级别的数据量，也不适合用JPA，其实也不适合用jdbc(可以使用数据库读写分离，分库分表方案解决)</li>
+</ul>
+</li>
+<li><p>JPA适用项目规模</p>
+<ul>
+<li>现在JPA一般用于中小型项目,如果是一个超大型项目,不建议使用JPA(性能影响)  -&gt;  需要自己去完成性能上的优化.有的优化,JPA真的是做不了. 一般会使用MyBatis(后面会学习的)多点</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-ORM的概念"><a href="#3-ORM的概念" class="headerlink" title="3.ORM的概念"></a>3.ORM的概念</h2><ul>
+<li><p>Object Relational Mapping, <strong>对象关系映射</strong></p>
+<p>ORM 就是通过将Java对象映射到数据库表，通过操作Java对象，就可以完成对数据表的</p>
+<p>操作</p>
+</li>
+</ul>
+<p><img src="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps1.jpg" alt="img"></p>
+<h2 id="4-CRUD"><a href="#4-CRUD" class="headerlink" title="4. CRUD"></a>4. CRUD</h2><h3 id="4-1-导包"><a href="#4-1-导包" class="headerlink" title="4.1 导包"></a>4.1 导包</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">       <span class="comment">&lt;!-- hibernate的包 --&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.hibernate<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hibernate-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.3.8.Final<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">       <span class="comment">&lt;!-- hibernate对于jpa的支持包 --&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.hibernate<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hibernate-entitymanager<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.3.8.Final<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">       <span class="comment">&lt;!-- mysql的驱动包 --&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">       <span class="comment">&lt;!-- junit的测试包 --&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="4-2-核心配置文件persistence-xml"><a href="#4-2-核心配置文件persistence-xml" class="headerlink" title="4.2 核心配置文件persistence.xml"></a>4.2 核心配置文件persistence.xml</h3><p>而JPA中我们也需要先找到这些常用配置：</p>
+<p><img src="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps2.jpg" alt="img"> </p>
+<p><img src="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps3.jpg" alt="img"> </p>
+<p><img src="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps4.jpg" alt="img"> </p>
+<p><img src="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps5.jpg" alt="img">  </p>
+<p><strong>搜索配置文件</strong></p>
+<p>在hibernate-release-4.3.8.Final\project搜索p*.xml</p>
+<p>然后拷贝persistence.xml到classpath目录的META-INF下(JPA规范要求)</p>
+<p><img src="file:///C:%5CUsers%5Cq1120%5CAppData%5CLocal%5CTemp%5Cksohtml11700%5Cwps6.jpg" alt="img"></p>
+<h3 id="4-3-配置文件代码"><a href="#4-3-配置文件代码" class="headerlink" title="4.3 配置文件代码"></a>4.3 配置文件代码</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">persistence-unit</span> <span class="attr">name</span>=<span class="string">"day01"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--配置数据源</span></span><br><span class="line"><span class="comment">                #hibernate.dialect org.hibernate.dialect.MySQLDialect</span></span><br><span class="line"><span class="comment">                #hibernate.connection.driver_class com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="comment">                #hibernate.connection.url jdbc:mysql:///test</span></span><br><span class="line"><span class="comment">                #hibernate.connection.username gavin</span></span><br><span class="line"><span class="comment">                #hibernate.connection.password</span></span><br><span class="line"><span class="comment">            --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.connection.driver_class"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.connection.url"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql:///jpa"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.connection.username"</span> <span class="attr">value</span>=<span class="string">"root"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.connection.password"</span> <span class="attr">value</span>=<span class="string">"root"</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--配置数据库方言--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.dialect"</span> <span class="attr">value</span>=<span class="string">"org.hibernate.dialect.MySQLDialect"</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--选配--&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--创建表的生成策略</span></span><br><span class="line"><span class="comment">                #hibernate.hbm2ddl.auto create-drop</span></span><br><span class="line"><span class="comment">                #hibernate.hbm2ddl.auto create</span></span><br><span class="line"><span class="comment">                #hibernate.hbm2ddl.auto update</span></span><br><span class="line"><span class="comment">                #hibernate.hbm2ddl.auto validate</span></span><br><span class="line"><span class="comment">            --&gt;</span></span><br><span class="line">           <span class="comment">&lt;!-- &lt;property name="hibernate.hbm2ddl.auto" value="create"/&gt;--&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--sql可见#hibernate.show_sql true--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.show_sql"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--格式化sql hibernate.format_sql true--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.format_sql"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">persistence-unit</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="4-4-实体类"><a href="#4-4-实体类" class="headerlink" title="4.4 实体类"></a>4.4 实体类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table</span>(name =<span class="string">"t_user"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue</span></span><br><span class="line">    <span class="keyword">private</span>  Long id;</span><br><span class="line">    <span class="keyword">private</span>  String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Long <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Long id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"User&#123;"</span> +</span><br><span class="line">                <span class="string">"id="</span> + id +</span><br><span class="line">                <span class="string">", name='"</span> + name + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="4-5-CRUD"><a href="#4-5-CRUD" class="headerlink" title="4.5 CRUD"></a>4.5 CRUD</h3><h4 id="4-5-1-获取连接"><a href="#4-5-1-获取连接" class="headerlink" title="4.5.1 获取连接"></a>4.5.1 获取连接</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">EntityManager entityManager=<span class="keyword">null</span>;</span><br><span class="line">   User user=<span class="keyword">null</span>;</span><br><span class="line">   <span class="meta">@Before</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">       user = <span class="keyword">new</span> User();</span><br><span class="line">       user.setName(<span class="string">"文鑫2"</span>);</span><br><span class="line">       EntityManagerFactory factory = Persistence.createEntityManagerFactory(<span class="string">"day01"</span>);</span><br><span class="line">       entityManager = factory.createEntityManager();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h4 id="4-5-2-查询"><a href="#4-5-2-查询" class="headerlink" title="4.5.2 查询"></a>4.5.2 查询</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testFind</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">       User user = entityManager.find(User.class, <span class="number">1L</span>);</span><br><span class="line">       System.out.println(user);</span><br><span class="line">       entityManager.close();</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testFindAll</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        String sql=<span class="string">"select u from User u"</span>;</span><br><span class="line">       Query query = entityManager.createQuery(sql);</span><br><span class="line">       List&lt;User&gt; list = query.getResultList();</span><br><span class="line">       <span class="keyword">for</span> (User user:list) &#123;</span><br><span class="line">           System.out.println(user);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-3-添加"><a href="#4-5-3-添加" class="headerlink" title="4.5.3 添加"></a>4.5.3 添加</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">   public void testAdd() throws Exception&#123;</span><br><span class="line">       EntityTransaction transaction = entityManager.getTransaction();</span><br><span class="line">       transaction.begin();</span><br><span class="line">       entityManager.persist(user);</span><br><span class="line">       transaction.commit();</span><br><span class="line">       entityManager.close();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-4-删除"><a href="#4-5-4-删除" class="headerlink" title="4.5.4 删除"></a>4.5.4 删除</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@Test</span><br><span class="line">   public void testDelete() throws Exception&#123;</span><br><span class="line">       EntityTransaction transaction = entityManager.getTransaction();</span><br><span class="line">       transaction.begin();</span><br><span class="line">       User user = entityManager.find(User.class, 1L);</span><br><span class="line">       entityManager.remove(user);</span><br><span class="line">       transaction.commit();</span><br><span class="line">       entityManager.close();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5-5-修改"><a href="#4-5-5-修改" class="headerlink" title="4.5.5 修改"></a>4.5.5 修改</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testUpdate</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">       entityManager.getTransaction().begin();</span><br><span class="line">       User user = entityManager.find(User.class, <span class="number">2L</span>);</span><br><span class="line">       user.setName(<span class="string">"锐哥"</span>);</span><br><span class="line">       entityManager.merge(user);</span><br><span class="line">       entityManager.getTransaction().commit();</span><br><span class="line">       entityManager.close();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-配置建表策略"><a href="#5-配置建表策略" class="headerlink" title="5. 配置建表策略"></a>5. 配置建表策略</h2><h3 id="5-1-配置属性名称：hibernate-hbm2ddl-auto"><a href="#5-1-配置属性名称：hibernate-hbm2ddl-auto" class="headerlink" title="5.1 配置属性名称：hibernate.hbm2ddl.auto"></a>5.1 配置属性名称：hibernate.hbm2ddl.auto</h3><ul>
+<li><p>如果需要生成表,只需要表名,列名以及对应列名的类型,这些全部在持久类里面都有定义</p>
+</li>
+<li><p>创建表的时间:成功获取到EntityManagerFactory对象</p>
+</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.hbm2ddl.auto"</span> <span class="attr">value</span>=<span class="string">"create"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-create-只有在测试的时候使用"><a href="#5-2-create-只有在测试的时候使用" class="headerlink" title="5.2 create(只有在测试的时候使用)"></a>5.2 create(只有在测试的时候使用)</h3><ul>
+<li><p>先删除表,再创建表,不会再删除表</p>
+</li>
+<li><p>如果更改了domain类的映射，会马上生效 </p>
+</li>
+</ul>
+<h3 id="5-3-create-drop"><a href="#5-3-create-drop" class="headerlink" title="5.3 create-drop"></a>5.3 create-drop</h3><ul>
+<li><p>这个开发一般不会用,面试会被问到</p>
+</li>
+<li><p>先删除表,再创建表,再删除表</p>
+</li>
+<li><p>删除表的时间:必须把EntityManagerFactory关闭</p>
+</li>
+</ul>
+<h3 id="5-4-update-用在测试和web项目"><a href="#5-4-update-用在测试和web项目" class="headerlink" title="5.4 update(用在测试和web项目)"></a>5.4 update(用在测试和web项目)</h3><ul>
+<li>如果没表就根据最新的映射信息来创建表</li>
+<li>如果表里面已经有这个属性,如修改属性的长度,不会更新到表里面</li>
+<li>需要更新这个列先删除表或者删除这个属性对应的列名</li>
+<li>如果表里面没有属性,映射信息存在,会增加这个列</li>
+</ul>
+<h3 id="5-5-validate-用在系统已经上线或者客户给定了数据库"><a href="#5-5-validate-用在系统已经上线或者客户给定了数据库" class="headerlink" title="5.5 validate(用在系统已经上线或者客户给定了数据库)"></a>5.5 <strong>validate</strong>(用在系统已经上线或者客户给定了数据库)</h3><ul>
+<li><p>表不存在,会抛出异常</p>
+<p>Domain类映射信息少属性,表比映射定义的列要多,不会报错</p>
+<p>反之，抛出异常</p>
+</li>
+</ul>
+<h2 id="6-核心API"><a href="#6-核心API" class="headerlink" title="6. 核心API"></a>6. 核心API</h2><table>
+<thead>
+<tr>
+<th>Persistence</th>
+<th>主要用于创建EntityManagerFactory，根据传入的Persistence Unit名称来创建对应的EntityManagerFactory。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>EntityManagerFactory</td>
+<td>EntityManager工厂(负责创建EntityManager对象)</td>
+</tr>
+<tr>
+<td>EntityManager</td>
+<td>实体管理对象</td>
+</tr>
+<tr>
+<td>EntityTransaction</td>
+<td>事务对象</td>
+</tr>
+</tbody></table>
+<h3 id="6-1-EntityManagerFactory"><a href="#6-1-EntityManagerFactory" class="headerlink" title="6.1 EntityManagerFactory"></a>6.1 EntityManagerFactory</h3><ul>
+<li><p>在大多数情况下，一个应用中针对一个持久化单元可以共享一个EntityManagerFactory实例。</p>
+<p> 注意：一个应用程序对应一个EntityManagerFactory：一个数据库,广告词:1:1:1</p>
+</li>
+<li><p>EntityManagerFactory(SqlSessionFactory):线程安全对象，重量级对象</p>
+<ul>
+<li><p>EntityManagerFactory:线程安全对象(它是这么设计的)，它为什么要把这个设计成线程安全对象,一个对象设计成线程安全对象，代码复杂度会上升，效率会有影响,为什么要把它设计成一个线程安全对象，因为它是一个重量级对象?</p>
+</li>
+<li><p>EntityManagerFactory:重量级对象</p>
+<ul>
+<li>为什么它是一个重量级对象？ -&gt; 这个对象中有太多东西了。</li>
+</ul>
+<p>​        1.数据库配置信息它里面有一个连接池(本身就重，创建与销毁太费时间)</p>
+<p>​        2.二级缓存(查询缓存,…)</p>
+<p>​        3.预定义的JPQL语句(JPQL,SQL)</p>
+<p>​        4.所有实体及关系</p>
+<ul>
+<li>重量级对象 -&gt; 它的创建与销毁是非常非常非常的费时费性能的</li>
+</ul>
+</li>
+<li><p>由于它如此，以后我们项目在使用过程中是不关闭的(只有项目关闭的时候才关它)</p>
+</li>
+<li><p>一个对象如果不能随时创建销毁，我们又要使用它，那么它就只有一个 -&gt; 如果不设计成线程安全对象，就要出问题</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-2-EntityManager"><a href="#6-2-EntityManager" class="headerlink" title="6.2 EntityManager"></a>6.2 EntityManager</h3><ul>
+<li><p>EntityManager对象:轻量级的对象</p>
+<ul>
+<li><p>创建与销毁不怎么费性能(可以随时创建与销毁)</p>
+<p>​       类似Hibernate的Session对象(用的就是它)</p>
+</li>
+<li><p>一个EntityManager对象只可以由一个线程使用(后面非常有用)</p>
+<ul>
+<li>一个请求，一个响应</li>
+</ul>
+</li>
+<li><p>提供了相应的CRUD(它是线程不安全的)</p>
+</li>
+<li><p>它里面还装了一个一级缓存    </p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-单表配置细节"><a href="#7-单表配置细节" class="headerlink" title="7.单表配置细节"></a>7.单表配置细节</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> Long id; <span class="comment">//要求：主键，使用数据库的自动生成策略</span></span><br><span class="line"><span class="keyword">private</span> String name;  <span class="comment">//要求：varchar(20)，数据库名称为username,不能为空，唯一</span></span><br><span class="line"><span class="keyword">private</span> String password; </span><br><span class="line"><span class="keyword">private</span> Integer age = <span class="number">25</span>; <span class="comment">//要求：默认值是25，在插入数据时不允许覆盖(添加数据时不操作该字段)</span></span><br><span class="line"><span class="keyword">private</span> Boolean sex;<span class="comment">// 数据库没有布尔类型,bit对象 </span></span><br><span class="line"><span class="keyword">private</span> BigDecimal salary;<span class="comment">// 19,2 工资不能为负数 check(salary&gt;0.0)</span></span><br><span class="line"><span class="keyword">private</span> Date createTime;<span class="comment">//包含年月日时分秒，不允许修改</span></span><br><span class="line"><span class="keyword">private</span> Date birthday;<span class="comment">//包含年月日</span></span><br><span class="line"><span class="keyword">private</span> Date time;<span class="comment">//包含时分秒</span></span><br><span class="line"><span class="keyword">private</span> String text;<span class="comment">//这是一个大文本</span></span><br><span class="line"><span class="keyword">private</span> String temp;<span class="comment">//这一个字段不要同步到数据库</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-1-持久类映射配置"><a href="#7-1-持久类映射配置" class="headerlink" title="7.1 持久类映射配置"></a>7.1 持久类映射配置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span>(strategy = GenerationType.AUTO)</span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="meta">@Column</span>(length = <span class="number">20</span>, nullable = <span class="keyword">false</span>, unique = <span class="keyword">true</span>)</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="keyword">private</span> String password;</span><br><span class="line">  <span class="comment">// default="25"还必须同时配置一个属性insertable ="false",表示不出现在insert语句</span></span><br><span class="line">  <span class="meta">@Column</span>(insertable = <span class="keyword">false</span>, columnDefinition = <span class="string">"int(11) default '25'"</span>)</span><br><span class="line">  <span class="keyword">private</span> Integer age = <span class="number">25</span>;</span><br><span class="line">  <span class="keyword">private</span> Boolean sex;<span class="comment">// 数据库没有布尔类型,bit对象</span></span><br><span class="line">  <span class="meta">@Column</span>(columnDefinition = <span class="string">"decimal(19,2) check(salary&gt;0.0)"</span>)</span><br><span class="line">  <span class="keyword">private</span> BigDecimal salary;<span class="comment">// 19,2</span></span><br><span class="line">  <span class="comment">// update=false:一经保存就不能修改属性:身份证号码,创建时间</span></span><br><span class="line">  <span class="comment">// 如果填错了,客户不能改,上传身份证照片,找客服,客服验证:程序员留后台hql:</span></span><br><span class="line">  <span class="comment">// update Employee set idcart=? where id=?</span></span><br><span class="line">  <span class="comment">// 创建时间:年月日时分秒</span></span><br><span class="line">  <span class="meta">@Column</span>(updatable = <span class="keyword">false</span>)</span><br><span class="line">  <span class="meta">@Temporal</span>(TemporalType.TIMESTAMP)</span><br><span class="line">  <span class="keyword">private</span> Date createTime;</span><br><span class="line">  <span class="comment">// 生日:年月日</span></span><br><span class="line">  <span class="meta">@Temporal</span>(TemporalType.DATE)</span><br><span class="line">  <span class="keyword">private</span> Date birthday;</span><br><span class="line">  <span class="comment">// 开会时间:时分秒</span></span><br><span class="line">  <span class="meta">@Temporal</span>(TemporalType.TIME)</span><br><span class="line">  <span class="keyword">private</span> Date time;</span><br><span class="line">  <span class="comment">// 大文本</span></span><br><span class="line">  <span class="meta">@Lob</span></span><br><span class="line">  <span class="keyword">private</span> String text;</span><br><span class="line">  <span class="comment">// 如果name属性希望不持久化数据库</span></span><br><span class="line">  <span class="comment">// @Transient // 临时属性</span></span><br><span class="line">  <span class="keyword">private</span> String temp;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-测试代码"><a href="#7-2-测试代码" class="headerlink" title="7.2 测试代码"></a>7.2 测试代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainTest</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Before</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    Employee employee = <span class="keyword">new</span> Employee();</span><br><span class="line">    employee.setName(<span class="string">"property"</span>);</span><br><span class="line">    employee.setPassword(<span class="string">"yyyyy"</span>);</span><br><span class="line">    <span class="comment">// employee.setAge(20);</span></span><br><span class="line"></span><br><span class="line">    Date date = <span class="keyword">new</span> Date();</span><br><span class="line">    employee.setBirthday(date);</span><br><span class="line">    employee.setCreateTime(date);</span><br><span class="line">    employee.setTime(date);</span><br><span class="line"></span><br><span class="line">    employee.setSex(<span class="keyword">true</span>);</span><br><span class="line">    employee.setSalary(<span class="keyword">new</span> BigDecimal(-<span class="number">6000</span>));</span><br><span class="line">    employee.setText(<span class="string">"3qwrqwertfdsagfvdgbfdgbxcgfgfdhsg上传身份证照片,要找客服"</span>);</span><br><span class="line"></span><br><span class="line">    EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">    entityManager.getTransaction().begin();</span><br><span class="line">    entityManager.persist(employee);</span><br><span class="line">    entityManager.getTransaction().commit();</span><br><span class="line">    entityManager.close();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">    entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">    Employee employee = entityManager.find(Employee.class, <span class="number">1L</span>);</span><br><span class="line">    employee.setCreateTime(<span class="keyword">new</span> Date(<span class="number">100</span>, <span class="number">1</span>, <span class="number">1</span>));</span><br><span class="line">    employee.setName(<span class="string">"xxxxxxxxxxx"</span>);</span><br><span class="line">    entityManager.merge(employee);</span><br><span class="line"></span><br><span class="line">    entityManager.getTransaction().commit();</span><br><span class="line">    entityManager.close();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JPA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -270,7 +424,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/26/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/27/JPA(一)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -284,18 +438,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/26/Hexo博客部署到GitHub上/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo博客部署到GitHub上
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/26/Hexo博客搭建/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo博客搭建</div>
+    <a href="/2019/09/27/JPA(二)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JPA(二)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -322,7 +467,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-概念"><span class="toc-number">1.</span> <span class="toc-text">1. 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-JPA优缺点"><span class="toc-number">2.</span> <span class="toc-text">2. JPA优缺点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-ORM的概念"><span class="toc-number">3.</span> <span class="toc-text">3.ORM的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-CRUD"><span class="toc-number">4.</span> <span class="toc-text">4. CRUD</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-导包"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 导包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-核心配置文件persistence-xml"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 核心配置文件persistence.xml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-配置文件代码"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 配置文件代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-实体类"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 实体类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-CRUD"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 CRUD</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-1-获取连接"><span class="toc-number">4.5.1.</span> <span class="toc-text">4.5.1 获取连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-2-查询"><span class="toc-number">4.5.2.</span> <span class="toc-text">4.5.2 查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-3-添加"><span class="toc-number">4.5.3.</span> <span class="toc-text">4.5.3 添加</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-4-删除"><span class="toc-number">4.5.4.</span> <span class="toc-text">4.5.4 删除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-5-修改"><span class="toc-number">4.5.5.</span> <span class="toc-text">4.5.5 修改</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-配置建表策略"><span class="toc-number">5.</span> <span class="toc-text">5. 配置建表策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-配置属性名称：hibernate-hbm2ddl-auto"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 配置属性名称：hibernate.hbm2ddl.auto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-create-只有在测试的时候使用"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 create(只有在测试的时候使用)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-create-drop"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 create-drop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-update-用在测试和web项目"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 update(用在测试和web项目)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-validate-用在系统已经上线或者客户给定了数据库"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 validate(用在系统已经上线或者客户给定了数据库)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-核心API"><span class="toc-number">6.</span> <span class="toc-text">6. 核心API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-EntityManagerFactory"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 EntityManagerFactory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-EntityManager"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 EntityManager</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-单表配置细节"><span class="toc-number">7.</span> <span class="toc-text">7.单表配置细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-持久类映射配置"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 持久类映射配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-测试代码"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 测试代码</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -333,26 +478,6 @@
 
 
 
-	
-  <!-- ������City�氲װ���� -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC80NjgxNy8yMzMxOA==">
-	<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-	</script>
-<noscript> Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
-</div>
-<!-- City�氲װ��������� -->
-  
   
   
   
@@ -392,7 +517,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -455,7 +580,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hexo博客搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JPA</a>
               </li>
             
             <div class="clearfix"></div>
