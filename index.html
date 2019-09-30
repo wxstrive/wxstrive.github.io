@@ -155,6 +155,90 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JPA(三)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+        
+        
+<a href="/2019/09/30/JPA(三)/" class="archive-article-date">
+  	<time datetime="2019-09-30T00:46:11.302Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+     <center><p>
+  
+    <h1 itemprop="name">
+      <a class="article-title_code_ant" href="/2019/09/30/JPA(三)/">JPA(三)</a>
+    </h1>
+  
+</p></center>
+      
+        <h2 id="1-单向一对多"><a href="#1-单向一对多" class="headerlink" title="1. 单向一对多"></a>1. 单向一对多</h2><ul>
+<li><strong>单向一对多用得比较少(性能差)</strong>,无论怎样调整保存的顺序,都会有额外的update语句,原因就是现在外键是由一方来处理，一方处理必须发出额外的update语句</li>
+<li>fetch的值默认为FetchType.LAZY,则实现延时加载</li>
+</ul>
+<p><strong>映射配置:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  </span><br><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductDir</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="meta">@OneToMany</span></span><br><span class="line">  <span class="comment">// 必须配置外键id，否则会多生成一张表，形成多对多的关系</span></span><br><span class="line">  <span class="meta">@JoinColumn</span>(name = <span class="string">"dir_id"</span>)</span><br><span class="line">  <span class="comment">// 建议实例化，用的时候不需要在实例化，这里和单向多对一要求不同</span></span><br><span class="line">  <span class="keyword">private</span> Set&lt;Product&gt; products = <span class="keyword">new</span> HashSet&lt;Product&gt;();</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-集合映射"><a href="#2-集合映射" class="headerlink" title="2. 集合映射"></a>2. 集合映射</h2><ul>
+<li><p>声明集合的时候必须使用接口(List或者Set,而不能ArrayList或者HashSet)
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JPA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/30/JPA(三)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-JPA(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

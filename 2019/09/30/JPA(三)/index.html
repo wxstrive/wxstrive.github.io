@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 鑫仔的个人空间</title>
+  <title>JPA(三) | 鑫仔的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个彩笔程序员的个人学习空间,记录学习的点点滴滴~~~~">
-<meta property="og:type" content="website">
-<meta property="og:title" content="鑫仔的个人空间">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="1. 单向一对多 单向一对多用得比较少(性能差),无论怎样调整保存的顺序,都会有额外的update语句,原因就是现在外键是由一方来处理，一方处理必须发出额外的update语句 fetch的值默认为FetchType.LAZY,则实现延时加载  映射配置: 123456789101112131415161718@Entitypublic class Product &amp;#123;  @Id  @Gen">
+<meta name="keywords" content="JPA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JPA(三)">
+<meta property="og:url" content="http://yoursite.com/2019/09/30/JPA(三)/index.html">
 <meta property="og:site_name" content="鑫仔的个人空间">
-<meta property="og:description" content="一个彩笔程序员的个人学习空间,记录学习的点点滴滴~~~~">
+<meta property="og:description" content="1. 单向一对多 单向一对多用得比较少(性能差),无论怎样调整保存的顺序,都会有额外的update语句,原因就是现在外键是由一方来处理，一方处理必须发出额外的update语句 fetch的值默认为FetchType.LAZY,则实现延时加载  映射配置: 123456789101112131415161718@Entitypublic class Product &amp;#123;  @Id  @Gen">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-30T06:45:20.598Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="鑫仔的个人空间">
-<meta name="twitter:description" content="一个彩笔程序员的个人学习空间,记录学习的点点滴滴~~~~">
+<meta name="twitter:title" content="JPA(三)">
+<meta name="twitter:description" content="1. 单向一对多 单向一对多用得比较少(性能差),无论怎样调整保存的顺序,都会有额外的update语句,原因就是现在外键是由一方来处理，一方处理必须发出额外的update语句 fetch的值默认为FetchType.LAZY,则实现延时加载  映射配置: 123456789101112131415161718@Entitypublic class Product &amp;#123;  @Id  @Gen">
   
     <link rel="alternative" href="/atom.xml" title="鑫仔的个人空间" type="application/atom+xml">
   
@@ -153,37 +155,136 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JPA(三)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+      <header class="article-header">
+        
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2019/09/30/JPA(三)/" class="archive-article-date">
   	<time datetime="2019-09-30T00:46:11.302Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-30</time>
 </a>
-        </div>
-    	 
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+     <center><p>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/30/JPA(三)/">JPA(三)</a>
+    <h1 class="article-title_code_ant" itemprop="name">
+      JPA(三)
     </h1>
   
+</p></center>
+      
+        <h2 id="1-单向一对多"><a href="#1-单向一对多" class="headerlink" title="1. 单向一对多"></a>1. 单向一对多</h2><ul>
+<li><strong>单向一对多用得比较少(性能差)</strong>,无论怎样调整保存的顺序,都会有额外的update语句,原因就是现在外键是由一方来处理，一方处理必须发出额外的update语句</li>
+<li>fetch的值默认为FetchType.LAZY,则实现延时加载</li>
+</ul>
+<p><strong>映射配置:</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  </span><br><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductDir</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="meta">@OneToMany</span></span><br><span class="line">  <span class="comment">// 必须配置外键id，否则会多生成一张表，形成多对多的关系</span></span><br><span class="line">  <span class="meta">@JoinColumn</span>(name = <span class="string">"dir_id"</span>)</span><br><span class="line">  <span class="comment">// 建议实例化，用的时候不需要在实例化，这里和单向多对一要求不同</span></span><br><span class="line">  <span class="keyword">private</span> Set&lt;Product&gt; products = <span class="keyword">new</span> HashSet&lt;Product&gt;();</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<h2 id="2-集合映射"><a href="#2-集合映射" class="headerlink" title="2. 集合映射"></a>2. 集合映射</h2><ul>
+<li><p>声明集合的时候必须使用接口(List或者Set,而不能ArrayList或者HashSet)<a id="more"></a></p>
+</li>
+<li><p>常用的集合映射类型:</p>
+<ul>
+<li>java.util.Set:不能重复，集合里面的元素没有顺序<ul>
+<li>对应的代理类PersistentSet</li>
+<li>set一般用在多对多,也有一对多</li>
+<li>private Set<productset> products = new HashSet<productset>(); </productset></productset></li>
+</ul>
+</li>
+<li>java.util.List:可以重复，集合里面的元素有顺序<ul>
+<li>对应的代理类PersistentBag</li>
+<li>list一般只是用在组合关系</li>
+<li>private List<productset> products = new ArrayList<productset>();</productset></productset></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>小结:</p>
+<ul>
+<li>配置集合的时候必须配置接口</li>
+<li>一般都是使用Set接口，只有组合关系使用List接口</li>
+<li>使用List接口的时候可以配置@Order进行排序</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-双向多对一-双向一对多"><a href="#3-双向多对一-双向一对多" class="headerlink" title="3. 双向多对一/双向一对多"></a>3. 双向多对一/双向一对多</h2><h3 id="3-1-双向映射的配置"><a href="#3-1-双向映射的配置" class="headerlink" title="3.1 双向映射的配置"></a>3.1 双向映射的配置</h3><ul>
+<li><p>添加数据的时候我们选择比较多，因为现在是双向的，所以在添加的时候有多种选择。</p>
+<ul>
+<li>在java代码中让多方来维护关系(性能高)，类似于单向多对一</li>
+<li>在java 代码中让一方来维护关系(性能低-如下面的代码)，类似于单向一对多</li>
+</ul>
+</li>
+<li><p>可以通过mappedBy来指定谁来维护关系</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductDir</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="comment">// mappedBy = "dir"表示一方的关系参照多方Prodcut属性dir来管理</span></span><br><span class="line">  <span class="meta">@OneToMany</span>( mappedBy = <span class="string">"dir"</span>)</span><br><span class="line">  <span class="comment">// 建议实例化，用的时候不需要在实例化，这里和单向多对一要求不同</span></span><br><span class="line">  <span class="keyword">private</span> Set&lt;Product2&gt; products = <span class="keyword">new</span> HashSet&lt;Product2&gt;();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="comment">// 多Product对一ProductDir</span></span><br><span class="line">  <span class="comment">// 多个产品属于一个产品类型</span></span><br><span class="line">  <span class="comment">// 外键在那个表,这个表就是多</span></span><br><span class="line">  <span class="meta">@ManyToOne</span>(fetch = FetchType.LAZY) <span class="comment">// 实现延迟加载</span></span><br><span class="line">  <span class="comment">// JoinColum设置了外键的名字,不配置默认一方属性名_id</span></span><br><span class="line">   <span class="meta">@JoinColumn</span>(name = <span class="string">"dir_id"</span>)</span><br><span class="line">  <span class="comment">// 这里进行了实例(这种写法是错误的，我们一定不能在这里进行实例化)</span></span><br><span class="line">  <span class="keyword">private</span> ProductDir dir;</span><br></pre></td></tr></table></figure>
+
+<p>###3.2 级联操作</p>
+<h4 id="3-2-1-级联保存"><a href="#3-2-1-级联保存" class="headerlink" title="3.2.1 级联保存"></a>3.2.1 级联保存</h4><ul>
+<li><p>保存商品类别(ProductDir,一方)，就把它对应的商品(Product,多方)也一起保存起来！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 级联保存</span></span><br><span class="line"><span class="comment">// @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "dir")</span></span><br><span class="line"><span class="comment">// 1.mappedBy = "dir"表示一方的关系参照多方Prodcut属性dir来管理</span></span><br><span class="line"><span class="comment">// 2.cascade = CascadeType.PERSIST</span></span><br><span class="line"><span class="comment">// 3.必须2边都建立关系</span></span><br><span class="line"><span class="comment">// 4.entityManager.persist(dir);只能保存一方</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">persist2</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  <span class="comment">// 一方</span></span><br><span class="line">  ProductDir dir = <span class="keyword">new</span> ProductDir();</span><br><span class="line">  dir.setName(<span class="string">"类型2"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 多方</span></span><br><span class="line">  Product product = <span class="keyword">new</span> Product();</span><br><span class="line">  product.setName(<span class="string">"产品3"</span>);</span><br><span class="line"></span><br><span class="line">  Product product2 = <span class="keyword">new</span> Product();</span><br><span class="line">  product2.setName(<span class="string">"产品4"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 只能由一方建立到多方的关系(设置外键)</span></span><br><span class="line">  dir.getProducts().add(product);</span><br><span class="line">  dir.getProducts().add(product2);</span><br><span class="line">  <span class="comment">// 指建立多方到一方的关系</span></span><br><span class="line">  product.setDir(dir);</span><br><span class="line">  product2.setDir(dir);</span><br><span class="line"></span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  entityManager.persist(dir);</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="3-2-2-删除一方，然后级联删除多方"><a href="#3-2-2-删除一方，然后级联删除多方" class="headerlink" title="3.2.2 删除一方，然后级联删除多方"></a>3.2.2 删除一方，然后级联删除多方</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "dir")</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteAll</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  ProductDir dir = entityManager.find(ProductDir.class, <span class="number">1L</span>);</span><br><span class="line">  entityManager.remove(dir);</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-2-删除一方，不删除多方，使用jpql的update，delete语句实现"><a href="#3-2-2-删除一方，不删除多方，使用jpql的update，delete语句实现" class="headerlink" title="3.2.2 删除一方，不删除多方，使用jpql的update，delete语句实现"></a>3.2.2 删除一方，不删除多方，使用jpql的update，delete语句实现</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testDel2</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">       EntityManager entityManager = JPAUtil.getInstance();</span><br><span class="line">       entityManager.getTransaction().begin();</span><br><span class="line">       String sql=<span class="string">"update Employee  e set e.department=null"</span>;</span><br><span class="line">       Query query = entityManager.createQuery(sql);</span><br><span class="line">       query.executeUpdate();</span><br><span class="line">       Department department = entityManager.find(Department.class, <span class="number">2L</span>);</span><br><span class="line">       entityManager.remove(department);</span><br><span class="line">       entityManager.getTransaction().commit();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-3-删除一方，然后级联删除多方"><a href="#3-2-3-删除一方，然后级联删除多方" class="headerlink" title="3.2.3 删除一方，然后级联删除多方"></a>3.2.3 删除一方，然后级联删除多方</h4><ul>
+<li>删除商品分类(ProductDir,一方),它下面的所有商品(Product,多方)都要删除</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "dir")</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteAll</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  ProductDir dir = entityManager.find(ProductDir.class, <span class="number">1L</span>);</span><br><span class="line">  entityManager.remove(dir);</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-4-获取一方-在删除一个多方"><a href="#3-2-4-获取一方-在删除一个多方" class="headerlink" title="3.2.4 获取一方,在删除一个多方"></a>3.2.4 获取一方,在删除一个多方</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @OneToMany(mappedBy = "dir",orphanRemoval=true)</span></span><br><span class="line"><span class="comment">// orphanRemoval=true可以从一方删除解除关系（就是外键dir_id=null）的多方</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete2</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  ProductDir dir = entityManager.find(ProductDir.class, <span class="number">1L</span>);</span><br><span class="line">  Product product = entityManager.find(Product.class, <span class="number">1L</span>);</span><br><span class="line">  <span class="comment">// 删除所有和当前对象解除关联关系的对象</span></span><br><span class="line">  dir.getProducts().remove(product);</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-5-获取一方-在删除所有多方"><a href="#3-2-5-获取一方-在删除所有多方" class="headerlink" title="3.2.5 获取一方,在删除所有多方"></a>3.2.5 获取一方,在删除所有多方</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @OneToMany(mappedBy = "dir",orphanRemoval=true)</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete3</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  ProductDir dir = entityManager.find(ProductDir.class, <span class="number">1L</span>);</span><br><span class="line">  <span class="comment">// 删除所有和当前对象解除关联关系的对象</span></span><br><span class="line">  dir.getProducts().clear();</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-6-级联操作总结"><a href="#3-2-6-级联操作总结" class="headerlink" title="3.2.6 级联操作总结"></a>3.2.6 级联操作总结</h4><ol>
+<li><p>一般项目开发很少配置cascade</p>
+</li>
+<li><p>如果要配,尽量为cascade = CascadeType.PERSIST</p>
+</li>
+<li><p>如果配置CascadeType.REMOVE,CascadeType.ALL包含级联删除,是比较危险操作</p>
+</li>
+<li><p>不过组合关系必须用cascade = CascadeType.ALL,</p>
+</li>
+</ol>
+<h2 id="4-双向多对多"><a href="#4-双向多对多" class="headerlink" title="4. 双向多对多"></a>4. 双向多对多</h2><h3 id="4-1-配置"><a href="#4-1-配置" class="headerlink" title="4.1 配置"></a>4.1 配置</h3><h4 id="4-1-1-Role-角色"><a href="#4-1-1-Role-角色" class="headerlink" title="4.1.1 Role(角色)"></a>4.1.1 Role(角色)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table</span>(name = <span class="string">"t_role"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Role</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="meta">@ManyToMany</span></span><br><span class="line">  <span class="meta">@JoinTable</span>(name = <span class="string">"t_user_role"</span>, joinColumns = &#123; <span class="meta">@JoinColumn</span>(name = <span class="string">"role_id"</span>) &#125;,inverseJoinColumns = &#123;</span><br><span class="line">      <span class="meta">@JoinColumn</span>(name = <span class="string">"user_id"</span>) &#125;)</span><br><span class="line">  <span class="keyword">private</span> Set&lt;User&gt; users = <span class="keyword">new</span> HashSet&lt;User&gt;();</span><br><span class="line">｝</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-1-2-User-用户"><a href="#4-1-2-User-用户" class="headerlink" title="4.1.2 User(用户)"></a>4.1.2 User(用户)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table</span>(name = <span class="string">"t_user"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="comment">// 多对多:一个用户拥有多个角色</span></span><br><span class="line">  <span class="comment">// @ManyToMany注释表示Teacher是多对多关系的一端。</span></span><br><span class="line">  <span class="comment">// @JoinTable描述了多对多关系的数据表关系。name属性指定中间表名称，joinColumns定义中间表与Teacher表的外键关系。</span></span><br><span class="line">  <span class="comment">// 中间表Teacher_Student的Teacher_ID列是Teacher表的主键列对应的外键列，没有在user这个配置inverseJoinColumns属性定义了中间表与另外一端(Student)的外键关系。</span></span><br><span class="line">  <span class="meta">@ManyToMany</span></span><br><span class="line">  <span class="meta">@JoinTable</span>(name = <span class="string">"t_user_role"</span>, joinColumns = &#123; <span class="meta">@JoinColumn</span>(name = <span class="string">"user_id"</span>) &#125;, inverseJoinColumns = &#123;</span><br><span class="line">      <span class="meta">@JoinColumn</span>(name = <span class="string">"role_id"</span>) &#125;)</span><br><span class="line">  <span class="keyword">private</span> Set&lt;Role&gt; roles = <span class="keyword">new</span> HashSet&lt;Role&gt;();</span><br><span class="line">｝</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-级联保存"><a href="#4-2-级联保存" class="headerlink" title="4.2 级联保存"></a>4.2 级联保存</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// User:@ManyToMany(cascade = CascadeType.PERSIST)</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">persist2</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  <span class="comment">// 保存2个用户,保存3个角色(5条)</span></span><br><span class="line">  User user1 = <span class="keyword">new</span> User(<span class="string">"user1"</span>);</span><br><span class="line">  User user2 = <span class="keyword">new</span> User(<span class="string">"user2"</span>);</span><br><span class="line"></span><br><span class="line">  Role role1 = <span class="keyword">new</span> Role(<span class="string">"role1"</span>);</span><br><span class="line">  Role role2 = <span class="keyword">new</span> Role(<span class="string">"role2"</span>);</span><br><span class="line">  Role role3 = <span class="keyword">new</span> Role(<span class="string">"role3"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 保存中间表:建立用户到角色关系user1(role1,role2),user2(role1,role2,role3)(5条)</span></span><br><span class="line">  user1.getRoles().add(role1);</span><br><span class="line">  user1.getRoles().add(role2);</span><br><span class="line"></span><br><span class="line">  user2.getRoles().add(role1);</span><br><span class="line">  user2.getRoles().add(role2);</span><br><span class="line">  user2.getRoles().add(role3);</span><br><span class="line"></span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 保存用户的同时，级联保存角色</span></span><br><span class="line">  entityManager.persist(user1);</span><br><span class="line">  entityManager.persist(user2);</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">  System.out.println(<span class="string">"------------------------"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-删除user1-先删除中间表-再删除user1"><a href="#4-3-删除user1-先删除中间表-再删除user1" class="headerlink" title="4.3 删除user1(先删除中间表,再删除user1)"></a>4.3 删除user1(先删除中间表,再删除user1)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注意：User对象是有管理中间表的权限的</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete1</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  User user = entityManager.find(User.class, <span class="number">1L</span>);</span><br><span class="line">  entityManager.remove(user);</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-删除user1的所有包含角色-只删除中间表"><a href="#4-4-删除user1的所有包含角色-只删除中间表" class="headerlink" title="4.4 删除user1的所有包含角色(只删除中间表)"></a>4.4 删除user1的所有包含角色(只删除中间表)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注意：User对象是有管理中间表的权限的</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete2</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  User user = entityManager.find(User.class, <span class="number">1L</span>);</span><br><span class="line">  user.getRoles().clear();</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-5-删除user1的一个角色-只删除中间表"><a href="#4-5-删除user1的一个角色-只删除中间表" class="headerlink" title="4.5 删除user1的一个角色(只删除中间表)"></a>4.5 删除user1的一个角色(只删除中间表)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注意：User对象是有管理中间表的权限的</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete3</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  User user = entityManager.find(User.class, <span class="number">1L</span>);</span><br><span class="line">  Role role = entityManager.find(Role.class, <span class="number">1L</span>);</span><br><span class="line">  user.getRoles().remove(role);</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-6-修改角色-先删除仔添加"><a href="#4-6-修改角色-先删除仔添加" class="headerlink" title="4.6 修改角色:先删除仔添加"></a>4.6 修改角色:先删除仔添加</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注意：User对象是有管理中间表的权限的</span></span><br><span class="line"><span class="comment">// 关系user1(role1,role2)-&gt;关系user1(role1,role3)</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">delete4</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line"></span><br><span class="line">  User user = entityManager.find(User.class, <span class="number">1L</span>);</span><br><span class="line">  Role role2 = entityManager.find(Role.class, <span class="number">2L</span>);</span><br><span class="line">  Role role3 = entityManager.find(Role.class, <span class="number">3L</span>);</span><br><span class="line">  user.getRoles().remove(role2);</span><br><span class="line">  user.getRoles().add(role3);</span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行的sql:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hibernate: <span class="keyword">delete</span> <span class="keyword">from</span> t_user_role <span class="keyword">where</span> user_id=?</span><br><span class="line">Hibernate: <span class="keyword">insert</span> <span class="keyword">into</span> t_user_role (user_id, role_id) <span class="keyword">values</span> (?, ?)</span><br><span class="line"><span class="comment">#先把用户与角色关系删除完，再添加相应的关系</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,175 +296,135 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/30/JPA(三)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/27/JPA(一)/" class="archive-article-date">
-  	<time datetime="2019-09-27T12:26:32.916Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/27/JPA(一)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JPA(一)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/27/JPA(一)/">JPA(一)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JPA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-单向一对多"><span class="toc-number">1.</span> <span class="toc-text">1. 单向一对多</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-集合映射"><span class="toc-number">2.</span> <span class="toc-text">2. 集合映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-双向多对一-双向一对多"><span class="toc-number">3.</span> <span class="toc-text">3. 双向多对一/双向一对多</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-双向映射的配置"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 双向映射的配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-级联保存"><span class="toc-number">3.1.1.</span> <span class="toc-text">3.2.1 级联保存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-删除一方，然后级联删除多方"><span class="toc-number">3.1.2.</span> <span class="toc-text">3.2.2 删除一方，然后级联删除多方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-删除一方，不删除多方，使用jpql的update，delete语句实现"><span class="toc-number">3.1.3.</span> <span class="toc-text">3.2.2 删除一方，不删除多方，使用jpql的update，delete语句实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-3-删除一方，然后级联删除多方"><span class="toc-number">3.1.4.</span> <span class="toc-text">3.2.3 删除一方，然后级联删除多方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-4-获取一方-在删除一个多方"><span class="toc-number">3.1.5.</span> <span class="toc-text">3.2.4 获取一方,在删除一个多方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-5-获取一方-在删除所有多方"><span class="toc-number">3.1.6.</span> <span class="toc-text">3.2.5 获取一方,在删除所有多方</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-6-级联操作总结"><span class="toc-number">3.1.7.</span> <span class="toc-text">3.2.6 级联操作总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-双向多对多"><span class="toc-number">4.</span> <span class="toc-text">4. 双向多对多</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-配置"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-1-Role-角色"><span class="toc-number">4.1.1.</span> <span class="toc-text">4.1.1 Role(角色)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-2-User-用户"><span class="toc-number">4.1.2.</span> <span class="toc-text">4.1.2 User(用户)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-级联保存"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 级联保存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-删除user1-先删除中间表-再删除user1"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 删除user1(先删除中间表,再删除user1)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-删除user1的所有包含角色-只删除中间表"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 删除user1的所有包含角色(只删除中间表)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-删除user1的一个角色-只删除中间表"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 删除user1的一个角色(只删除中间表)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-修改角色-先删除仔添加"><span class="toc-number">4.6.</span> <span class="toc-text">4.6 修改角色:先删除仔添加</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/27/JPA(二)/" class="archive-article-date">
-  	<time datetime="2019-09-27T11:57:37.362Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/27/JPA(二)/">JPA(二)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JPA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/26/Hexo博客部署到GitHub上/" class="archive-article-date">
-  	<time datetime="2019-09-26T12:13:32.227Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/26/Hexo博客部署到GitHub上/">Hexo博客部署到GitHub上</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Hexo博客搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2019/09/26/Hexo博客搭建/" class="archive-article-date">
-  	<time datetime="2019-09-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/26/Hexo博客搭建/">Hexo博客搭建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Hexo博客搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2019/09/30/JPA(三)/",
+  owner: 'wxstrive',
+  repo: 'wxstrive.github.io',
+  oauth: {
+    client_id: 'c4153057ae1d60f968b4',
+    client_secret: 'c7a47c801d1019877bd7625cec1aa2343f88f957',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -395,8 +456,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
