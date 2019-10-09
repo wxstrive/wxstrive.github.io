@@ -6,22 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JPA(二) | 鑫仔的个人空间</title>
+  <title>Spring(一) | 鑫仔的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 主键生成策略1.1 概念 主键是关系数据库中的一个基本概念，它用来保证记录的唯一性。简单来说，就是同一张数据库表中，不允许存在多条相同主键的记录。 主键生成策略，就是当向数据库表中插入记录的时候，这个记录的主键该如何生成。绝大部分情况下，主键都是没有业务含义的，所以开发者不会、也不需要，显示地设置实体对象的主键值。但是对于数据库来说，主键是必须的，显然这个责任，落在了持久层框架上。  1.2">
-<meta name="keywords" content="JPA">
+  <meta name="description" content="1.什么是Spring Spring是一个轻量级控制反转(IOC)和面向切面编程(AOP)的容器框架； (1) 轻量级：相对于重量级（框架设计比较繁琐，配置较多，例如EJB（tomcat不支持），现在基本不用了）而言，开发使用比较简单，功能强大； (2) IOC（Inverse of control）：将创建对象的权利交给Spring容器（不再使用以前new关键字创建对象）； (3) AOP（As">
+<meta name="keywords" content="Spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JPA(二)">
-<meta property="og:url" content="http://yoursite.com/2019/09/27/JPA(二)/index.html">
+<meta property="og:title" content="Spring(一)">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/Spring/index.html">
 <meta property="og:site_name" content="鑫仔的个人空间">
-<meta property="og:description" content="1. 主键生成策略1.1 概念 主键是关系数据库中的一个基本概念，它用来保证记录的唯一性。简单来说，就是同一张数据库表中，不允许存在多条相同主键的记录。 主键生成策略，就是当向数据库表中插入记录的时候，这个记录的主键该如何生成。绝大部分情况下，主键都是没有业务含义的，所以开发者不会、也不需要，显示地设置实体对象的主键值。但是对于数据库来说，主键是必须的，显然这个责任，落在了持久层框架上。  1.2">
+<meta property="og:description" content="1.什么是Spring Spring是一个轻量级控制反转(IOC)和面向切面编程(AOP)的容器框架； (1) 轻量级：相对于重量级（框架设计比较繁琐，配置较多，例如EJB（tomcat不支持），现在基本不用了）而言，开发使用比较简单，功能强大； (2) IOC（Inverse of control）：将创建对象的权利交给Spring容器（不再使用以前new关键字创建对象）； (3) AOP（As">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/09/27/qx8L1ejbO2D7IzH.png">
-<meta property="og:updated_time" content="2019-09-27T12:29:08.514Z">
+<meta property="og:image" content="c:%5CUsers%5Cq1120%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567508855488.png">
+<meta property="og:image" content="c:%5CUsers%5Cq1120%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567509696959.png">
+<meta property="og:updated_time" content="2019-10-08T11:36:54.520Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JPA(二)">
-<meta name="twitter:description" content="1. 主键生成策略1.1 概念 主键是关系数据库中的一个基本概念，它用来保证记录的唯一性。简单来说，就是同一张数据库表中，不允许存在多条相同主键的记录。 主键生成策略，就是当向数据库表中插入记录的时候，这个记录的主键该如何生成。绝大部分情况下，主键都是没有业务含义的，所以开发者不会、也不需要，显示地设置实体对象的主键值。但是对于数据库来说，主键是必须的，显然这个责任，落在了持久层框架上。  1.2">
-<meta name="twitter:image" content="https://i.loli.net/2019/09/27/qx8L1ejbO2D7IzH.png">
+<meta name="twitter:title" content="Spring(一)">
+<meta name="twitter:description" content="1.什么是Spring Spring是一个轻量级控制反转(IOC)和面向切面编程(AOP)的容器框架； (1) 轻量级：相对于重量级（框架设计比较繁琐，配置较多，例如EJB（tomcat不支持），现在基本不用了）而言，开发使用比较简单，功能强大； (2) IOC（Inverse of control）：将创建对象的权利交给Spring容器（不再使用以前new关键字创建对象）； (3) AOP（As">
+<meta name="twitter:image" content="c:%5CUsers%5Cq1120%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567508855488.png">
   
     <link rel="alternative" href="/atom.xml" title="鑫仔的个人空间" type="application/atom+xml">
   
@@ -157,7 +158,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JPA(二)" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Spring" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -169,8 +170,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2019/09/27/JPA(二)/" class="archive-article-date">
-  	<time datetime="2019-09-27T11:57:37.362Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
+<a href="/2019/10/08/Spring/" class="archive-article-date">
+  	<time datetime="2019-10-08T11:33:04.121Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
 </a>
         
       </header>
@@ -179,137 +180,123 @@
      <center><p>
   
     <h1 class="article-title_code_ant" itemprop="name">
-      JPA(二)
+      Spring(一)
     </h1>
   
 </p></center>
       
-        <h2 id="1-主键生成策略"><a href="#1-主键生成策略" class="headerlink" title="1. 主键生成策略"></a>1. 主键生成策略</h2><h3 id="1-1-概念"><a href="#1-1-概念" class="headerlink" title="1.1 概念"></a>1.1 概念</h3><ul>
-<li>主键是关系数据库中的一个基本概念，它用来保证记录的唯一性。简单来说，就是同一张数据库表中，不允许存在多条相同主键的记录。</li>
-<li>主键生成策略，就是当向数据库表中插入记录的时候，这个记录的主键该如何生成。绝大部分情况下，主键都是没有业务含义的，所以开发者不会、也不需要，显示地设置实体对象的主键值。但是对于数据库来说，主键是必须的，显然这个责任，落在了持久层框架上。</li>
-</ul>
-<h3 id="1-2-OIDd的管理"><a href="#1-2-OIDd的管理" class="headerlink" title="1.2 OIDd的管理"></a>1.2 OIDd的管理</h3><ul>
-<li>JPA使用OID(对象标识符)来建立内存中的对象和数据库中记录的对应关系</li>
-<li>对象的OID和数据库表的主键对应</li>
-<li>主键值的管理直接由JPA来处理</li>
-<li>OID的形式———1L#Student(数据中的id#对象的类型)<a id="more"></a></li>
-</ul>
-<h3 id="1-3-主键实现的两种类型"><a href="#1-3-主键实现的两种类型" class="headerlink" title="1.3 主键实现的两种类型"></a>1.3 主键实现的两种类型</h3><ul>
-<li>自然主键:有业务含义的主键1 </li>
-<li></li>
-<li>代理主键:这个主键没有意义,用来区别每行的数据是不同的,最常用</li>
-</ul>
-<h3 id="1-4-JPA中的四种主键生成策略"><a href="#1-4-JPA中的四种主键生成策略" class="headerlink" title="1.4 JPA中的四种主键生成策略"></a>1.4 JPA中的四种主键生成策略</h3><ul>
-<li><p>AUTO策略——–默把主键生成策略交给JPA厂商(Persistence Provider)，由它根据具体的数据库选择合适的策略，可以是Table/Sequence/Identity中的一种。最常用</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GeneratedValue</span>(strategy = GenerationType.AUTO)</span><br><span class="line"><span class="keyword">private</span> Long id;</span><br><span class="line">等价于</span><br><span class="line"><span class="meta">@GeneratedValue</span></span><br><span class="line"><span class="keyword">private</span> Long id;</span><br></pre></td></tr></table></figure>
+        <h2 id="1-什么是Spring"><a href="#1-什么是Spring" class="headerlink" title="1.什么是Spring"></a>1.什么是Spring</h2><ol>
+<li><p>Spring是一个轻量级控制反转(IOC)和面向切面编程(AOP)的容器框架；</p>
+<p>(1) 轻量级：相对于重量级（框架设计比较繁琐，配置较多，例如EJB（tomcat不支持），现在基本不用了）而言，开发使用比较简单，功能强大；</p>
+<p>(2) IOC（Inverse of control）：将创建对象的权利交给Spring容器（不再使用以前new关键字创建对象）；</p>
+<p>(3) AOP（Aspect Oriented Programming）：将相同的逻辑抽取出来，即将业务逻辑从应用服务中分离出来。然后以拦截的方式作用在一个方法的不同位置。例如日志，事务的处理；</p>
 </li>
-<li><p>IDENTITY策略——-多数数据库支持IDENTITY列，数据库会在新行插入时自动给ID赋值，这也叫做ID自增长列，如MySQL, SQL Server, DB2, Derby, Sybase, PostgreSQL</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Id</span></span><br><span class="line"><span class="meta">@GeneratedValue</span>(strategy = GenerationType.IDENTITY)</span><br><span class="line"><span class="keyword">private</span> Long id;</span><br></pre></td></tr></table></figure>
+<li><p>Spring致力于J2EE应用的各层的解决方案，而不是仅仅专注于某一层的方案。在企业级开发中，通常用于整合其他层次的框架；<a id="more"></a></p>
 </li>
-<li><p>SEQUENCE策略—–Oracle不支持ID自增长列而是使用序列的机制生成主键ID,对此，可以选用序列作为主键生成策略</p>
+<li><p>Spring相当于是一个大的工厂，程序员需要将对象的创建交给Spring去执行；</p>
 </li>
-<li><p>TABLE策略—–时候为了不依赖于数据库的具体实现，在不同数据库之间更好的移植，可以在数据库中新建序列表来生成主键，序列表一般包含两个字段：第一个字段引用不同的关系表，第二个字段是该关系表的最大序号。这样，只需要一张序列就可以用于多张表的主键生成。 用法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@TableGenerator</span>(name = <span class="string">"SEQ"</span>, table = <span class="string">"OidDomain_TABLE"</span>, pkColumnName = <span class="string">"SEQUENCE_NAME"</span>, valueColumnName = <span class="string">"SEQUENCE_COUNT"</span>, initialValue = <span class="number">1</span>, allocationSize = <span class="number">1</span>)</span><br><span class="line"><span class="meta">@GeneratedValue</span>(strategy = GenerationType.TABLE, generator = <span class="string">"SEQ"</span>)</span><br><span class="line"><span class="keyword">private</span> Long id;</span><br></pre></td></tr></table></figure>
+<li><p>Spring的一个最大的目的就是使JavaEE开发更加容易。Spring提供了对开源社区中很多框架及JavaEE中很多技术的支持，让程序员很轻松能整合及使用这些框架技术；</p>
+</li>
+<li><p>Spring在一定程度行降低了代码之间的耦合度，使得维护难度降低了；</p>
+</li>
+</ol>
+<h2 id="2-Spring容器的实例化"><a href="#2-Spring容器的实例化" class="headerlink" title="2.Spring容器的实例化"></a>2.Spring容器的实例化</h2><ul>
+<li><p>Spring容器对象有两种：BeanFactory和ApplicationContext；</p>
+</li>
+<li><p>ApplicationContext继承自BeanFactory接口，拥有更多的企业级方法，推荐使用该类型</p>
+</li>
+</ul>
+<h3 id="2-1-BeanFactory"><a href="#2-1-BeanFactory" class="headerlink" title="2.1 BeanFactory"></a>2.1 BeanFactory</h3><p>​        BeanFactory是一个接口，可以通过其实现类XmlBeanFactor获取其实例。接口中有一个getBean()方法可以获取Spring容器中配置或注册的Bean对象；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testHelloSpring</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *我们第一步是要启动框架，而启动框架则需要拿到Spring的核心对象</span></span><br><span class="line"><span class="comment">	 *咱们学习的第一个核心对象是BeanFactory : 顾名思义，这是一个创建Bean的工厂</span></span><br><span class="line"><span class="comment">	 *而Bean工厂创建对象又必需拿到配置文件中的数据</span></span><br><span class="line"><span class="comment">	 *因为：我们的第一步读取配置文件，拿到BeanFactory工厂	</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="comment">//第一步：读取资源文件</span></span><br><span class="line">	Resource resource = <span class="keyword">new</span> ClassPathResource(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">	<span class="comment">//第二步：拿到核心对象 BeanFactory</span></span><br><span class="line">	BeanFactory factory = <span class="keyword">new</span> XmlBeanFactory(resource);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="2-2-ApplicationContext"><a href="#2-2-ApplicationContext" class="headerlink" title="2.2 ApplicationContext"></a>2.2 ApplicationContext</h3><ol>
+<li><p>ApplicationContext的中文意思是”应用程序上下文”，它继承自BeanFactory接口，除了包含BeanFactory的所有功能之外，在国际化支持、资源访问（如URL和文件）、事件传播等方面进行了良好的支持，被推荐为JavaEE应用之首选，可应用在Java APP与Java Web中；</p>
+</li>
+<li><p>要使用ApplicationContext的功能，必需要导入相应的jar包：</p>
+<p>​        spring-context-4.1.2.RELEASE.jar </p>
+<p>​        spring-expression-4.1.2.RELEASE.jar</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//加载文件系统中的配置文件实例化</span></span><br><span class="line">String conf = <span class="string">"C:\applicationContext.xml"</span>;</span><br><span class="line">ApplicationContext factory = <span class="keyword">new</span> FileSystemXmlApplicationContext(conf);</span><br><span class="line"><span class="comment">//加载工程classpath下的配置文件实例化</span></span><br><span class="line">String conf = <span class="string">"applicationContext.xml"</span>;</span><br><span class="line">ApplicationContext factory = <span class="keyword">new</span> ClassPathXmlApplicationContext(conf);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-获取对象方式"><a href="#2-3-获取对象方式" class="headerlink" title="2.3 获取对象方式"></a>2.3 获取对象方式</h3><p><strong>一、通过id直接拿到相应的Bean对象</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过xml中配置的id拿到对象</span></span><br><span class="line">MyBean bean = (MyBean)factory.getBean(<span class="string">"myBean"</span>);</span><br><span class="line">System.out.println(bean);</span><br></pre></td></tr></table></figure>
+
+<p><strong>二、通过id与对象的Class对象拿到Bean对象（常用）</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过id与对象的class拿到Bean对象</span></span><br><span class="line">MyBean bean = factory.getBean(<span class="string">"myBean"</span>,MyBean.class);</span><br><span class="line">System.out.println(bean);</span><br></pre></td></tr></table></figure>
+
+<p><strong>三、通过Class对象拿到Bean对象</strong></p>
+<p>限制：这个方式的Class类在配置中只能出现一次</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//通过的class拿到Bean对象</span></span><br><span class="line">MyBean bean = factory.getBean(MyBean.class);</span><br><span class="line">System.out.println(bean);</span><br></pre></td></tr></table></figure>
+
+<p>如果是以下情况，方式三会出错，而方式一与方式二不会出错：</p>
+<p><img src="C:%5CUsers%5Cq1120%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567508855488.png" alt="1567508855488"></p>
+<h3 id="2-4-区别"><a href="#2-4-区别" class="headerlink" title="2.4 区别"></a>2.4 区别</h3><p>联系：</p>
+<p>ApplicationContext是BeanFactory的子类，拥有更多的功能与方法；</p>
+<p>区别：</p>
+<p>ApplicationContext默认是在读取配置文件的时候就会根据配置创建Bean对象（迫切加载）。而BeanFactory是在使用的时候才进行对象的创建（懒加载/延迟加载）</p>
+<p>扩展：</p>
+<p>我们在使用ApplicationContext的时候，可以通过配置让它也变成与BeanFactory一样的懒加载：</p>
+<p>在<bean>标签中加入lazy-init=”true”</bean></p>
+<h2 id="3-ApplicationContext-xml的配置"><a href="#3-ApplicationContext-xml的配置" class="headerlink" title="3. ApplicationContext.xml的配置"></a>3. ApplicationContext.xml的配置</h2><ul>
+<li><p>bean元素：表示对象配置或注册标签；id属性：这个bean对象在Spring容器中的唯一标识，也可以使用name，常用id（唯一特性），获取这个对象的时候就可以通过这个表示来获取；class属性：对应对象所属类的完全限定名。注意这里可以是JDK自带的类，也可以是自己新建的类；</p>
+</li>
+<li><p>Spring中Bean可以使用id和name作为唯一标识，建议使用id；</p>
+</li>
+<li><p>Bean作用域可以使用Scope属性指定，默认是单例singleton，可以配置成多例prototype</p>
+</li>
+<li><p>懒加载就是将Bean（单例）的实例化和初始化延迟到使用或获取的时候（默认在容器创建的时候），通过lazy-init实现，一般都是默认</p>
+</li>
+<li><p>Bean对象生命周期：实例化（无参公有构造）、初始化（通过init-method指定方法、服务（程序中使用）、销毁（通过destroy-method指定方法））</p>
+</li>
+</ul>
+<h2 id="4-Spring测试"><a href="#4-Spring测试" class="headerlink" title="4. Spring测试"></a>4. Spring测试</h2><h3 id="4-1-步骤"><a href="#4-1-步骤" class="headerlink" title="4.1 步骤"></a>4.1 步骤</h3><p><strong>一、导包</strong></p>
+<p><strong>spring-test-4.1.2.RELEASE.jar 测试包</strong></p>
+<p><strong>spring-aop-4.1.2.RELEASE.jar</strong>  <strong>AOP包</strong></p>
+<p><strong>二、编写测试类和方法</strong></p>
+<p>注解：</p>
 <ul>
-<li><p>如果不指定表生成器，JPA厂商会使用默认的表，比如Hibernate在Oracle数据库上会默认使用表hibernate_sequence。</p>
+<li><p>@RunWith：表示先启动Spring容器，把junit运行在Spring容器中；</p>
 </li>
-<li><p>这种方式虽然通用性最好，所有的关系型数据库都支持，但是由于不能充分利用具体数据库的特性，性能差，建议不要优先使用</p>
+<li><p>@ContextConfiguration(“classpath:applicationContext.xml”)：表示从CLASSPATH路径去加载资源文件；</p>
+</li>
+<li><p>@Autowired：表示自动装配，自动从Spring容器中取出对应bean赋值给当前使用的属性；</p>
 </li>
 </ul>
-</li>
-</ul>
-<h2 id="2-JPA对象的状态"><a href="#2-JPA对象的状态" class="headerlink" title="2. JPA对象的状态"></a>2. JPA对象的状态</h2><ul>
-<li>临时态(瞬时态), 刚刚用new语句创建，没有和entityManager发生关系</li>
-<li>持久态,  有关系的 merge persist find ,和entityManager发生关系已经被持久化，加入到entityManager的一级缓存中(填充一级缓存)<ul>
-<li>持久状态的对象是不能修改OID(不能修改主键),否则会报identifier of an instance of cn.itsource.jpa.state.StateDomain was altered from x to x的错误</li>
-</ul>
-</li>
-<li>游离态,  事务提交 close,已经被持久化，但不处于entityManager中</li>
-<li>删除态: 把持久态对象,修改为删除态,只有调用了entityManager.remove(domain对象)方法</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  StateDomain stateDomain = <span class="keyword">new</span> StateDomain();<span class="comment">// 临时状态</span></span><br><span class="line">  stateDomain.setName(<span class="string">"itsource"</span>);<span class="comment">// 临时状态</span></span><br><span class="line"></span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line">  entityManager.persist(stateDomain);<span class="comment">// 持久状态</span></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();<span class="comment">// 游离状态</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner.class)</span><br><span class="line"><span class="meta">@ContextConfiguration</span>(<span class="string">"classpath:applicationContext.xml"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringTest</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 	现在的测试环境应该是这样的</span></span><br><span class="line"><span class="comment">	 * 	Spring环境自行启动，所有的核心对象已经处于Spring之中，都应该由Spring自己来创建</span></span><br><span class="line"><span class="comment">	 * 	<span class="doctag">@Autowired</span>的意思是自动注入，ApplcationContext这个类是Spring内部存在的，它也是一个Bean，</span></span><br><span class="line"><span class="comment">	 * 		Spring可以把它创建出来，在它看到上面的这个标签后，再把创建的Bean注入进来</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> ApplicationContext context;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 这个TestBean我们已经在Spring中配置好。交给Spring来管理</span></span><br><span class="line"><span class="comment">	 * Spring即可以来创建这个对象，再把这个对象注入进来</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> TestBean testBean;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testGetBean</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		System.out.println(testBean);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-1-脏数据更新"><a href="#2-1-脏数据更新" class="headerlink" title="2.1 脏数据更新"></a>2.1 脏数据更新</h3><ul>
-<li><p>一个持久状态对象在事务管理内,如果改变原来的数据(非主键)，此时出现脏数据,在事务提交的时候自动发出update语句去修改。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">  entityManager.getTransaction().begin();</span><br><span class="line">  </span><br><span class="line">  StateDomain stateDomain = entityManager.find(StateDomain.class, <span class="number">1L</span>);<span class="comment">// 持久状态</span></span><br><span class="line">  stateDomain.setName(<span class="string">"stateDomain"</span>);</span><br><span class="line">  <span class="comment">// 写不写效果是一样</span></span><br><span class="line">  entityManager.merge(stateDomain);<span class="comment">// 持久状态</span></span><br><span class="line"></span><br><span class="line">  entityManager.getTransaction().commit();</span><br><span class="line">  entityManager.close();<span class="comment">// 游离状态</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h2 id="5-Spring注入"><a href="#5-Spring注入" class="headerlink" title="5. Spring注入"></a>5. Spring注入</h2><p>简单理解：</p>
+<ol>
+<li><p>注入就是通过一小段配置，让Spring容器自动给属性赋值；</p>
 </li>
-</ul>
-<h4 id="2-1-1-流程分析"><a href="#2-1-1-流程分析" class="headerlink" title="2.1.1 流程分析"></a>2.1.1 流程分析</h4><p>第一步：拿到entityManager,开启事务</p>
-<p>第二步：通过entityManager拿到一个对象，那么现在这个对象就是持久化的对象</p>
-<p>​                这个对象会放到一级缓存里面</p>
-<p>​                JPA会为当前这个对象准备一个快照(把这个对象进行了备份)</p>
-<p>第三步：提交事务</p>
-<p>​                它会把快照 与 你现在这个对象的数据进行对比</p>
-<p>​                如果相同，就不需要修改，也不会发送SQL(性能就高了)</p>
-<p>​                当不相同的时候，JPA就会认为现在这个数据是脏数据</p>
-<p>​                脏数据它就会在事务提交的时候，把它进行数据库的同步(发送update SQL语句)</p>
-<h3 id="2-2-entityManager的方法改变持久对象的状态"><a href="#2-2-entityManager的方法改变持久对象的状态" class="headerlink" title="2.2 entityManager的方法改变持久对象的状态"></a>2.2 entityManager的方法改变持久对象的状态</h3><p><img src="https://i.loli.net/2019/09/27/qx8L1ejbO2D7IzH.png" alt="a.png"></p>
-<h2 id="3-域对象之间的关系"><a href="#3-域对象之间的关系" class="headerlink" title="3. 域对象之间的关系"></a>3. 域对象之间的关系</h2><ul>
-<li><p>类之间的引用关系，以属性定义的方式表现。</p>
+<li><p>有参构造可以给属性赋值，setter方法可以给属性赋值；</p>
 </li>
-<li><p>关联按照<strong>多重性</strong>可分为一对一、一对多、多对一和多对多。 主要指的数据库(类)的关系</p>
+<li><p>注入的过程由容器完成，我们只需要配置(发指令)，怎么注入的不用管；</p>
 </li>
-<li><p>按照<strong>导航性</strong>可分为<strong>单向</strong>关联和<strong>双向</strong>关联。(<strong>表是没有导航性的</strong>) </p>
-</li>
-</ul>
-<h2 id="4-单向多对一"><a href="#4-单向多对一" class="headerlink" title="4. 单向多对一"></a>4. 单向多对一</h2><ul>
-<li>单向就是java的一个类Product可以获取另一个类ProductDir</li>
-</ul>
-<h3 id="4-1-一方类型"><a href="#4-1-一方类型" class="headerlink" title="4.1 一方类型"></a>4.1 一方类型</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductDir</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br></pre></td></tr></table></figure>
+</ol>
+<h3 id="5-1-构造器注入"><a href="#5-1-构造器注入" class="headerlink" title="5.1 构造器注入"></a>5.1 构造器注入</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//JavaBean类（必须有无参构造（Spring容器创建对象）和有参构造（构造器注入：Spring容器调用））：</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Phone</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String cpu;</span><br><span class="line">	<span class="keyword">private</span> String sim;</span><br><span class="line">	<span class="keyword">private</span> String sd;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Phone</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Phone</span><span class="params">(String cpu)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.cpu = cpu;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSim</span><span class="params">(String sim)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.sim = sim;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSd</span><span class="params">(String sd)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.sd = sd;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"Phone [cpu="</span> + cpu + <span class="string">", sim="</span> + sim + <span class="string">", sd="</span> + sd + <span class="string">"]"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//xml配置：</span></span><br><span class="line">&lt;bean id=<span class="string">"phone"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"cn.itsource.bean.Phone"</span>&gt;</span><br><span class="line">	&lt;constructor-arg index="0" value="RAM11"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line"><span class="comment">//测试：</span></span><br><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner.class)</span><br><span class="line"><span class="meta">@ContextConfiguration</span>(<span class="string">"classpath:applicationContext.xml"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringTest</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> Phone phone;</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testCreateObj</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(phone);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//结果：</span></span><br><span class="line">Phone [cpu=RAM11, sim=<span class="keyword">null</span>, sd=<span class="keyword">null</span>]</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-2-多方类型"><a href="#4-2-多方类型" class="headerlink" title="4.2 多方类型"></a>4.2 多方类型</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Product</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Id</span></span><br><span class="line">  <span class="meta">@GeneratedValue</span></span><br><span class="line">  <span class="keyword">private</span> Long id;</span><br><span class="line">  <span class="keyword">private</span> String name;</span><br><span class="line">  <span class="comment">// 多Product对一ProductDir</span></span><br><span class="line">  <span class="comment">// 多个产品属于一个产品类型</span></span><br><span class="line">  <span class="comment">// 外键在那个表,这个表就是多</span></span><br><span class="line">  <span class="meta">@ManyToOne</span>(fetch = FetchType.LAZY) <span class="comment">// 实现延迟加载</span></span><br><span class="line">  <span class="comment">// @ManyToOne(fetch = FetchType.EAGER) // 默认值，左外连接查询</span></span><br><span class="line">  <span class="comment">// JoinColum设置了外键的名字,不配置默认一方属性名_id</span></span><br><span class="line">  <span class="comment">// @JoinColumn(name = "dir_id")</span></span><br><span class="line">  <span class="keyword">private</span> ProductDir dir;</span><br></pre></td></tr></table></figure>
+<h3 id="5-2-Setter注入"><a href="#5-2-Setter注入" class="headerlink" title="5.2 Setter注入"></a>5.2 Setter注入</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//JavaBean类（必须有无参构造（Spring容器创建对象）和有参构造（构造器注入：Spring容器调用））：</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Phone</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String cpu;</span><br><span class="line">	<span class="keyword">private</span> String sim;</span><br><span class="line">	<span class="keyword">private</span> String sd;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Phone</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">Phone</span><span class="params">(String cpu)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.cpu = cpu;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSim</span><span class="params">(String sim)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.sim = sim;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSd</span><span class="params">(String sd)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.sd = sd;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"Phone [cpu="</span> + cpu + <span class="string">", sim="</span> + sim + <span class="string">", sd="</span> + sd + <span class="string">"]"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//xml配置：</span></span><br><span class="line">&lt;bean id=<span class="string">"phone"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"cn.itsource.bean.Phone"</span>&gt;</span><br><span class="line">	&lt;constructor-arg index="0" value="RAM11"&gt;&lt;/constructor-arg&gt;</span><br><span class="line">	&lt;property name="sim" value="中国电信"&gt;&lt;/property&gt;</span><br><span class="line">     &lt;!-- value是注入基本值，如果注入是bean对象，要使用ref=<span class="string">"其他bean的id/name值"</span> --&gt;</span><br><span class="line">	&lt;property name="sd" value="512M"&gt;&lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br><span class="line"><span class="comment">//测试：</span></span><br><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner.class)</span><br><span class="line"><span class="meta">@ContextConfiguration</span>(<span class="string">"classpath:applicationContext.xml"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringTest</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> Phone phone;</span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testCreateObj</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(phone);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//结果：</span></span><br><span class="line">Phone [cpu=RAM11, sim=中国电信, sd=<span class="number">512</span>M]</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-3-使用时"><a href="#4-3-使用时" class="headerlink" title="4.3 使用时"></a>4.3 使用时</h3><h4 id="4-3-1-错误写法"><a href="#4-3-1-错误写法" class="headerlink" title="4.3.1 错误写法"></a>4.3.1 错误写法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先保存多方（产品）</span></span><br><span class="line">entityManager.persist(product);</span><br><span class="line">entityManager.persist(product2);</span><br><span class="line"><span class="comment">// 保存一方（产品类型）</span></span><br><span class="line">entityManager.persist(dir);</span><br><span class="line"><span class="comment">//会导致发送多条sql</span></span><br><span class="line">Hibernate: <span class="function">insert into <span class="title">Product</span> <span class="params">(dir_id, name)</span> <span class="title">values</span> <span class="params">(?, ?)</span></span></span><br><span class="line"><span class="function">Hibernate: insert into <span class="title">Product</span> <span class="params">(dir_id, name)</span> <span class="title">values</span> <span class="params">(?, ?)</span></span></span><br><span class="line"><span class="function">Hibernate: insert into <span class="title">ProductDir</span> <span class="params">(name)</span> <span class="title">values</span> <span class="params">(?)</span></span></span><br><span class="line"><span class="function">Hibernate: update Product set dir_id</span>=?, name=? where id=?</span><br><span class="line">Hibernate: update Product set dir_id=?, name=? where id=?</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-3-2-正确写法"><a href="#4-3-2-正确写法" class="headerlink" title="4.3.2 正确写法"></a>4.3.2 正确写法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 保存一方（产品类型）</span></span><br><span class="line">entityManager.persist(dir);</span><br><span class="line"><span class="comment">// 先保存多方（产品）</span></span><br><span class="line">entityManager.persist(product);</span><br><span class="line">entityManager.persist(product2);</span><br><span class="line"></span><br><span class="line">Hibernate: <span class="function">insert into <span class="title">Product</span> <span class="params">(dir_id, name)</span> <span class="title">values</span> <span class="params">(?, ?)</span></span></span><br><span class="line"><span class="function">Hibernate: insert into <span class="title">Product</span> <span class="params">(dir_id, name)</span> <span class="title">values</span> <span class="params">(?, ?)</span></span></span><br><span class="line"><span class="function">Hibernate: insert into <span class="title">ProductDir</span> <span class="params">(name)</span> <span class="title">values</span> <span class="params">(?)</span></span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-4-fetch抓取策略"><a href="#4-4-fetch抓取策略" class="headerlink" title="4.4 fetch抓取策略"></a>4.4 fetch抓取策略</h3><ul>
-<li><p>FetchType.EAGER：fetch的默认值，立即加载</p>
+<h2 id="6-Spring集成DBCP连接池"><a href="#6-Spring集成DBCP连接池" class="headerlink" title="6. Spring集成DBCP连接池"></a>6. Spring集成DBCP连接池</h2><p><strong>一、导包</strong></p>
 <ul>
-<li>默认情况下，JPA持续性提供程序使用获取类型EAGER：这将要求持续性提供程序运行时必须迫切左外连接获取数据</li>
+<li>com.springsource.org.apache.commons.pool-1.5.3.jar</li>
+<li>com.springsource.org.apache.commons.dbcp-1.2.2.osgi.jar</li>
+<li>mysql-connector-java-5.1.26-bin.jar</li>
 </ul>
-</li>
-<li><p>FetchType.LAZY：延迟加载</p>
-<ul>
-<li><p>FetchType.LAZY：这将提示持续性提供程序在首次访问数据时并不急于获取数据</p>
-</li>
-<li><p>获取持久状态对象之后，还需要获取关联对象，此时才会真正发出sql,获取值</p>
-</li>
-<li><p>提高性能,但是如果把entityManager 提前关闭,会出现(延迟加载)延迟初始化异常org.hibernate.LazyInitializationException: could not initialize proxy - no Session</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line"></span><br><span class="line">  Product product = (Product) entityManager.find(Product.class, <span class="number">1L</span>);</span><br><span class="line">  System.out.println(product);</span><br><span class="line">  System.out.println(<span class="string">"多方的外键==一方主键:"</span> + product.getDir().getId());</span><br><span class="line">  <span class="comment">// 延迟加载</span></span><br><span class="line">  <span class="comment">// 通过javassist-3.18.1-GA.jar代理模式:ProductDir_$$_jvst960_1代理对象</span></span><br><span class="line">  System.out.println(<span class="string">"一方的class:"</span> + product.getClass());</span><br><span class="line">  System.out.println(<span class="string">"一方的class:"</span> + product.getDir().getClass());</span><br><span class="line">  <span class="comment">//这里执行了SQL语句(因为使用到的类别的name在product表查询中没有，只能从数据库去查询)</span></span><br><span class="line">  System.out.println(<span class="string">"一方非主键属性:"</span> + product.getDir().getName());</span><br><span class="line"></span><br><span class="line">  entityManager.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>二、创建BasicDataSource</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置一个DBCP的Bean，Spring管理内部Bean（Jdk自带的类），之前是管理外部Bean（自己写的一个类） --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">name</span>=<span class="string">"dateSource"</span> <span class="attr">class</span>=<span class="string">"org.apache.commons.dbcp.BasicDataSource"</span> </span></span><br><span class="line"><span class="tag">	<span class="attr">destroy-method</span>=<span class="string">"close"</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 注意：这里我们不是使用的ref引用，而是直接写的value，因此注入的数据是一个基本值，是一个字符串 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driverClassName"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql:///test"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"root"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"admin"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-二级缓存"><a href="#5-二级缓存" class="headerlink" title="5.二级缓存"></a>5.二级缓存</h2><ul>
-<li><p>导包</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.hibernate<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hibernate-ehcache<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.3.8.Final<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加persistence.xml配置信息</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 启用二级缓存 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.cache.use_second_level_cache"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 二级缓存的实现类,文档里面的包名有错的 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 错误 org.hibernate.cache.internal.EhCacheRegionFactory --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 正确的 org.hibernate.cache.ehcache.EhCacheRegionFactory --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.cache.region.factory_class"</span> <span class="attr">value</span>=<span class="string">"org.hibernate.cache.ehcache.EhCacheRegionFactory"</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 启用查询缓存 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hibernate.cache.use_query_cache"</span> <span class="attr">value</span>=<span class="string">"true"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在<properties>上面添加配置二级缓存扫描的策略</properties></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- ALL：所有的实体类都被缓存 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- NONE：所有的实体类都不被缓存. --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- ENABLE_SELECTIVE：标识 @Cacheable(true) 注解的实体类将被缓存 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- DISABLE_SELECTIVE：缓存除标识 @Cacheable(false) 以外的所有实体类 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- UNSPECIFIED：默认值，JPA 产品默认值将被使用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">shared-cache-mode</span>&gt;</span>ENABLE_SELECTIVE<span class="tag">&lt;/<span class="name">shared-cache-mode</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>domain类的二级缓存</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">二级缓存类配置:命中条件:同一个SessionFactory,不同的entityManager,OID相同</span><br><span class="line"><span class="comment">// 一条sql</span></span><br><span class="line"><span class="comment">// @Entity</span></span><br><span class="line"><span class="comment">// @Cacheable(true)</span></span><br><span class="line"><span class="comment">// public class Department</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">	EntityManager entityManager = JPAUtils.getEntityManager();</span><br><span class="line">	<span class="comment">//先从一级缓存，二级缓存取数据？取不到，发出sql去获取，填充一级缓存，二级缓存</span></span><br><span class="line">	Department department1 = entityManager.find(Department.class, <span class="number">1L</span>);</span><br><span class="line">	<span class="comment">//先从一级缓存，二级缓存取数据？一级缓存取到了，返回</span></span><br><span class="line">	Department department2 = entityManager.find(Department.class, <span class="number">1L</span>);<span class="comment">// 一级缓存命中</span></span><br><span class="line">	entityManager.close();</span><br><span class="line"></span><br><span class="line">	EntityManager entityManager2 = JPAUtils.getEntityManager();</span><br><span class="line">	<span class="comment">//先从一级缓存，二级缓存取数据？一级缓存没有取到，但是二级缓存取到了，返回</span></span><br><span class="line">	Department department3 = entityManager2.find(Department.class, <span class="number">1L</span>);<span class="comment">// 二级缓存命中</span></span><br><span class="line">	<span class="comment">//先从一级缓存，二级缓存取数据？一级缓存取到了，返回</span></span><br><span class="line">	Department department4 = entityManager2.find(Department.class, <span class="number">1L</span>);<span class="comment">// 一级缓存命中</span></span><br><span class="line">	entityManager2.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>面试题:什么场景使用二级缓存</p>
+<p><strong>三、使用资源文件.properties</strong></p>
+<p><img src="C:%5CUsers%5Cq1120%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1567509696959.png" alt="1567509696959"></p>
 <ul>
-<li><p>读取大于修改；</p>
+<li><p>注意.properties文件中的key（=前面的）一定要加前缀，不然会出现问题。因为username已经被Spring在使用，会导致咱们的username失效，产生错误；</p>
 </li>
-<li><p>对数据要有独享控制,数据不会被第三方修改；</p>
-</li>
-<li><p>可以容忍出现无效数据,非关键数据（不是财务数据等）</p>
-</li>
-<li><p>数据量不能超过内存容量,数据量特别巨大，此时不适合于二级缓存(<strong>钝化</strong>)</p>
+<li><p>如果实在不想加前缀，也可以在添加system-properties-mode=*”NEVER”*实现</p>
 </li>
 </ul>
-</li>
-</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">"classpath:jdbc.properties"</span> <span class="attr">system-properties-mode</span>=<span class="string">"NEVER"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -323,7 +310,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JPA</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
@@ -379,7 +366,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/27/JPA(二)/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/08/Spring/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -393,18 +380,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/27/JPA(一)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/08/Spring(二)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JPA(一)
+          Spring(二)
         
       </div>
     </a>
   
   
-    <a href="/2019/09/26/Hexo博客部署到GitHub上/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo博客部署到GitHub上</div>
+    <a href="/2019/09/30/JPA(三)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JPA(三)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -431,7 +418,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-主键生成策略"><span class="toc-number">1.</span> <span class="toc-text">1. 主键生成策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-概念"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-OIDd的管理"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 OIDd的管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-主键实现的两种类型"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 主键实现的两种类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-JPA中的四种主键生成策略"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 JPA中的四种主键生成策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-JPA对象的状态"><span class="toc-number">2.</span> <span class="toc-text">2. JPA对象的状态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-脏数据更新"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 脏数据更新</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-流程分析"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 流程分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-entityManager的方法改变持久对象的状态"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 entityManager的方法改变持久对象的状态</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-域对象之间的关系"><span class="toc-number">3.</span> <span class="toc-text">3. 域对象之间的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-单向多对一"><span class="toc-number">4.</span> <span class="toc-text">4. 单向多对一</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-一方类型"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 一方类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-多方类型"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 多方类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-使用时"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 使用时</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-1-错误写法"><span class="toc-number">4.3.1.</span> <span class="toc-text">4.3.1 错误写法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-2-正确写法"><span class="toc-number">4.3.2.</span> <span class="toc-text">4.3.2 正确写法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-fetch抓取策略"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 fetch抓取策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-二级缓存"><span class="toc-number">5.</span> <span class="toc-text">5.二级缓存</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-什么是Spring"><span class="toc-number">1.</span> <span class="toc-text">1.什么是Spring</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Spring容器的实例化"><span class="toc-number">2.</span> <span class="toc-text">2.Spring容器的实例化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-BeanFactory"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 BeanFactory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-ApplicationContext"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 ApplicationContext</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-获取对象方式"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 获取对象方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-区别"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-ApplicationContext-xml的配置"><span class="toc-number">3.</span> <span class="toc-text">3. ApplicationContext.xml的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Spring测试"><span class="toc-number">4.</span> <span class="toc-text">4. Spring测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-步骤"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Spring注入"><span class="toc-number">5.</span> <span class="toc-text">5. Spring注入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-构造器注入"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 构造器注入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-Setter注入"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Setter注入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Spring集成DBCP连接池"><span class="toc-number">6.</span> <span class="toc-text">6. Spring集成DBCP连接池</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -456,7 +443,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/09/27/JPA(二)/",
+  id: "http://yoursite.com/2019/10/08/Spring/",
   owner: 'wxstrive',
   repo: 'wxstrive.github.io',
   oauth: {
